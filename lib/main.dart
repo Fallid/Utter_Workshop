@@ -29,6 +29,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  void tekanTombol() {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -260,6 +261,36 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                padding: const EdgeInsets.only(top: 275),
+                child: SizedBox(
+                  height: 50,
+                  width: 200,
+                  child: ElevatedButton.icon(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.shopping_bag_outlined,
+                      color: Colors.white,
+                      size: 24.0,
+                    ),
+                    label: const Text(
+                      "New Product",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                        primary: Colors.blue[600],
+                        onPrimary: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(25))),
+                  ),
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );
